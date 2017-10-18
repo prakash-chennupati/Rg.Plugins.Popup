@@ -28,17 +28,17 @@ namespace Rg.Plugins.Popup.Droid.Renderers
 
             if (e.NewElement != null)
             {
-                Click += OnBackgroundClick;
+                this.Touch += OnBackgroundClick;
             }
             if (e.OldElement != null)
             {
-                Click -= OnBackgroundClick;
+                this.Touch -= OnBackgroundClick;
             }
         }
 
         protected override void Dispose(bool disposing)
         {
-            Click -= OnBackgroundClick;
+            this.Touch -= OnBackgroundClick;
 
             base.Dispose(disposing);
         }
